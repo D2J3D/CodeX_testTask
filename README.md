@@ -8,3 +8,14 @@ Data Warehouse implementation for a note keeping service.
 
 # Database structure
 ![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/a87f5199-eaca-417c-9a63-470696841558)
+
+# API structure
+Note object
+| Endpoint | Type | Description |
+| --- | --- | --- |
+|/notes| GET |Retrieves a Page<NoteDTO> of all objects (NoteDTO.class) from note table|
+|/notes/{id}| GET |Retrieves a ResponseEntity<NoteDTO> object that contains NoteDTO with selected id and Http status code|
+|/notes/{id}| POST |Creates a new Note with selected id. Retrieves saved object ResponseEntity<NoteDTO> with NoteDTO.class and Http status code|
+|/notes/{id}| PUT |Fully updates object with selected id|
+|/notes/{id}| PATCH |Partially updates object with selected id |
+|/notes/{id}| DELETE |Delete an note with selected id|
