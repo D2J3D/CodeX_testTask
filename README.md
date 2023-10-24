@@ -14,8 +14,8 @@ Note object
 | Endpoint | Type | Description |
 | --- | --- | --- |
 |/notes| GET |Retrieves a Page<NoteDTO> of all objects (NoteDTO.class) from note table|
-|/notes/{id}| GET |Retrieves a ResponseEntity<NoteDTO> object that contains NoteDTO with selected id and Http status code|
-|/notes/{id}| POST |Creates a new Note with selected id. Retrieves saved object ResponseEntity<NoteDTO> with NoteDTO.class and Http status code|
+|/notes/{id}| GET |Retrieves a ResponseEntity<NoteDTO>|
+|/notes/{id}| POST |Creates a new Note with selected id. Retrieves saved object ResponseEntity<NoteDTO>|
 |/notes/{id}| PUT |Fully updates object with selected id|
 |/notes/{id}| PATCH |Partially updates object with selected id |
 |/notes/{id}| DELETE |Delete an note with selected id|
