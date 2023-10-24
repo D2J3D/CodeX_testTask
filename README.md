@@ -44,7 +44,7 @@ Click object - object that is responsible for keeping statistics of clicking on 
 Edit object - object that is responsible for keeping statistics of editing notes
 | Endpoint | Type | Description |
 | --- | --- | --- |
-|/edit-stat| GET |Retrieves a Page<EditDTO> of all objects (EditDTO.class) from note table|
+|/edit-stat| GET |Retrieves a Page<EditDTO> of all objects (EditDTO.class) from note_edits table|
 |/edit-stat/{id}| GET |Retrieves a ResponseEntity\<EditDTO\>|
 |/edit-stat/{id}| POST |Creates a new Edit with selected id. Retrieves saved object ResponseEntity\<EditDTO\>|
 |/edit-stat/{id}| PUT |Fully updates object with selected id|
@@ -54,7 +54,7 @@ Edit object - object that is responsible for keeping statistics of editing notes
 View object - object that is responsible for keeping statistics of viewing the notes
 | Endpoint | Type | Description |
 | --- | --- | --- |
-|/view-stat| GET |Retrieves a Page<ViewDTO> of all objects (ViewDTO.class) from note table|
+|/view-stat| GET |Retrieves a Page<ViewDTO> of all objects (ViewDTO.class) from note_views table|
 |/view-stat/{id}| GET |Retrieves a ResponseEntity\<ViewDTO\>|
 |/view-stat/{id}| POST |Creates a new Veiw with selected id. Retrieves saved object ResponseEntity\<ViewDTO\>|
 |/view-stat/{id}| PUT |Fully updates object with selected id|
