@@ -15,7 +15,48 @@ Note object
 | --- | --- | --- |
 |/notes| GET |Retrieves a Page<NoteDTO> of all objects (NoteDTO.class) from note table|
 |/notes/{id}| GET |Retrieves a ResponseEntity\<NoteDTO\>|
-|/notes/{id}| POST |Creates a new Note with selected id. Retrieves saved object ResponseEntity<NoteDTO>|
+|/notes/{id}| POST |Creates a new Note with selected id. Retrieves saved object ResponseEntity\<NoteDTO\>|
 |/notes/{id}| PUT |Fully updates object with selected id|
 |/notes/{id}| PATCH |Partially updates object with selected id |
 |/notes/{id}| DELETE |Delete an note with selected id|
+
+User object
+| Endpoint | Type | Description |
+| --- | --- | --- |
+|/users| GET |Retrieves a Page<UserDTO> of all objects (UserDTO.class) from users table|
+|/users/{id}| GET |Retrieves a ResponseEntity\<UserDTO\>|
+|/users/{id}| POST |Creates a new User with selected id. Retrieves saved object ResponseEntity\<UserDTO\>|
+|/users/{id}| PUT |Fully updates user with selected id|
+|/users/{id}| PATCH |Partially updates user with selected id |
+|/users/{id}| DELETE |Delete an user with selected id|
+
+
+Click object - object that is responsible for keeping statistics of clicking on navigation button
+| Endpoint | Type | Description |
+| --- | --- | --- |
+|/nav-button-stat| GET |Retrieves a Page<ClickDTO> of all objects (ClickDTO.class) from nav_button_clicks table|
+|/nav-button-stat/{id}| GET |Retrieves a ResponseEntity\<ClickDTO\>|
+|/nav-button-stat/{id}| POST |Creates a new Click object with selected id. Retrieves saved object ResponseEntity\<ClickDTO\>|
+|/nav-button-stat/{id}| PUT |Fully updates object with selected id|
+|/nav-button-stat/{id}| PATCH |Partially updates object with selected id |
+|/nav-button-stat/{id}| DELETE |Delete an click-record with selected id|
+
+Edit object - object that is responsible for keeping statistics of editing notes
+| Endpoint | Type | Description |
+| --- | --- | --- |
+|/edit-stat| GET |Retrieves a Page<EditDTO> of all objects (EditDTO.class) from note table|
+|/edit-stat/{id}| GET |Retrieves a ResponseEntity\<EditDTO\>|
+|/edit-stat/{id}| POST |Creates a new Edit with selected id. Retrieves saved object ResponseEntity\<EditDTO\>|
+|/edit-stat/{id}| PUT |Fully updates object with selected id|
+|/edit-stat/{id}| PATCH |Partially updates object with selected id |
+|/notedit-states/{id}| DELETE |Delete an object with selected id|
+
+View object - object that is responsible for keeping statistics of viewing the notes
+| Endpoint | Type | Description |
+| --- | --- | --- |
+|/view-stat| GET |Retrieves a Page<ViewDTO> of all objects (ViewDTO.class) from note table|
+|/view-stat/{id}| GET |Retrieves a ResponseEntity\<ViewDTO\>|
+|/view-stat/{id}| POST |Creates a new Veiw with selected id. Retrieves saved object ResponseEntity\<ViewDTO\>|
+|/view-stat/{id}| PUT |Fully updates object with selected id|
+|/view-stat/{id}| PATCH |Partially updates object with selected id |
+|/view-stat/{id}| DELETE |Delete a view with selected id|
