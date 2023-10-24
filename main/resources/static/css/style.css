@@ -1,0 +1,10 @@
+table tbody tr th td{
+    border: 1px solid grey;
+}
+h1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.pagination{
+    margin-bottom: 10px;
+}
