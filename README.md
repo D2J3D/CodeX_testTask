@@ -60,3 +60,12 @@ View object - object that is responsible for keeping statistics of viewing the n
 |/view-stat/{id}| PUT |Fully updates object with selected id|
 |/view-stat/{id}| PATCH |Partially updates object with selected id |
 |/view-stat/{id}| DELETE |Delete a view with selected id|
+
+# Getting data from database visually (as a table)
+| Endpoint | Description |
+| --- | --- |
+|/display/notes|Shows all data from notes database, but with pagination|
+|/display/views|Shows all data from note_views database, but with pagination and sorted by createdAt field|
+|/display/edits|Shows all data from note_edits database, but with pagination and sorted by createdAt field|
+|/display/clicks|Shows all data from nav_button_clicks database, but with pagination and sorted by createdAt field|
+|/display/users|Shows all data from users database, but with pagination|
