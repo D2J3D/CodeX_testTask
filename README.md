@@ -7,7 +7,8 @@ Data Warehouse implementation for a note keeping service.
 3. And also there are graphs created [ coming soon ]
 
 # Database structure
-![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/a87f5199-eaca-417c-9a63-470696841558)
+![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/7be1ffd3-565a-47e7-acda-6809a1648e4f)
+
 
 # API structure
 Note object
