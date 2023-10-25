@@ -21,16 +21,16 @@ Note object
 |/notes/{id}| PATCH |Partially updates object with selected id |
 |/notes/{id}| DELETE |Delete an note with selected id|
 
-User object
+View object - object that is responsible for keeping statistics of viewing the notes
 | Endpoint | Type | Description |
 | --- | --- | --- |
-|/users| GET |Retrieves a Page<UserDTO> of all objects (UserDTO.class) from users table|
-|/users/{id}| GET |Retrieves a ResponseEntity\<UserDTO\>|
-|/users/{id}| POST |Creates a new User with selected id. Retrieves saved object ResponseEntity\<UserDTO\>|
-|/users/{id}| PUT |Fully updates user with selected id|
-|/users/{id}| PATCH |Partially updates user with selected id |
-|/users/{id}| DELETE |Delete an user with selected id|
-
+|/view-stat| GET |Retrieves a Page<ViewDTO> of all objects (ViewDTO.class) from note_views table|
+|/view-stat/{id}| GET |Retrieves a ResponseEntity\<ViewDTO\>|
+|/view-stat/{id}| POST |Creates a new Veiw with selected id. Retrieves saved object ResponseEntity\<ViewDTO\>|
+|/view-stat/{id}| PUT |Fully updates object with selected id|
+|/view-stat/{id}| PATCH |Partially updates object with selected id |
+|/view-stat/{id}| DELETE |Delete a view with selected id|
+|/view-stat/{startTimestamp}/{endTimestamp}| GET |Retrieves a Page\<ViewDTO> with all Views, that were made between startTimestamp and endTimestamp|
 
 Click object - object that is responsible for keeping statistics of clicking on navigation button
 | Endpoint | Type | Description |
@@ -52,16 +52,15 @@ Edit object - object that is responsible for keeping statistics of editing notes
 |/edit-stat/{id}| PATCH |Partially updates object with selected id |
 |/notedit-states/{id}| DELETE |Delete an object with selected id|
 
-View object - object that is responsible for keeping statistics of viewing the notes
+User object
 | Endpoint | Type | Description |
 | --- | --- | --- |
-|/view-stat| GET |Retrieves a Page<ViewDTO> of all objects (ViewDTO.class) from note_views table|
-|/view-stat/{id}| GET |Retrieves a ResponseEntity\<ViewDTO\>|
-|/view-stat/{id}| POST |Creates a new Veiw with selected id. Retrieves saved object ResponseEntity\<ViewDTO\>|
-|/view-stat/{id}| PUT |Fully updates object with selected id|
-|/view-stat/{id}| PATCH |Partially updates object with selected id |
-|/view-stat/{id}| DELETE |Delete a view with selected id|
-|/view-stat/{startTimestamp}/{endTimestamp}| GET |Retrieves a Page\<ViewDTO> with all Views, that were made between startTimestamp and endTimestamp|
+|/users| GET |Retrieves a Page<UserDTO> of all objects (UserDTO.class) from users table|
+|/users/{id}| GET |Retrieves a ResponseEntity\<UserDTO\>|
+|/users/{id}| POST |Creates a new User with selected id. Retrieves saved object ResponseEntity\<UserDTO\>|
+|/users/{id}| PUT |Fully updates user with selected id|
+|/users/{id}| PATCH |Partially updates user with selected id |
+|/users/{id}| DELETE |Delete an user with selected id|
 
 # Getting data from database visually (as a table)
 | Endpoint | Description |
