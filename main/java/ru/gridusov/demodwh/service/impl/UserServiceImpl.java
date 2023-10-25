@@ -50,10 +50,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User partialUpdate(Long id, User user) {
-        user.setId(id);
         return userRepository.findById(id).map(exisitingUser -> {
             Optional.ofNullable(user.getUserName()).ifPresent(exisitingUser::setUserName);
-            Optional.ofNullable(user.getNotesAmount()).ifPresent(exisitingUser::setNotesAmount);
             return userRepository.save(exisitingUser);
         }).orElseThrow(() -> new RuntimeException("User does not exist"));
 

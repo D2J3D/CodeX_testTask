@@ -16,6 +16,7 @@
             <thead>
                 <tr>
                     <th>Note ID</th>
+                    <th>User ID</th>
                     <th>Content</th>
                     <th>View Type</th>
                 </tr>
@@ -25,6 +26,7 @@
                 th:style="${iStat.odd}? 'font-weight: bold;'"
                 th:alt-title="${iStat.even}? 'even' : 'odd'">
                 <td th:text="${note.id}" />
+                <td th:text="${note.user.id}" />
                 <td th:text="${note.noteBody}" />
                 <td th:text="${note.noteViewType}" />
             </tr>

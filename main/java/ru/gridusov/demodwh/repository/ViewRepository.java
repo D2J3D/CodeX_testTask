@@ -1,5 +1,7 @@
 package ru.gridusov.demodwh.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import ru.gridusov.demodwh.model.entities.Note;
@@ -14,4 +16,5 @@ public interface ViewRepository extends CrudRepository<View, Long>, PagingAndSor
     List<View> findViewByCreatedAtAfter(Timestamp startTime);
     List<View> findViewByCreatedAtBefore(Timestamp endTime);
     List<View> findViewByCreatedAtBetween(Timestamp startTime, Timestamp endTime);
+    Page<View> findViewByCreatedAtBetween(Timestamp startTime, Timestamp endTime, Pageable pageable);
 }

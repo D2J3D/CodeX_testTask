@@ -36,7 +36,7 @@ public class NoteHtmlController {
     @GetMapping("/display/notes")
     public String listNotes(@RequestParam("page") Optional<Integer> page, @RequestParam("size") Optional<Integer> size,  Model model){
         Integer currentPage = page.orElse(1);
-        Integer pageSize = size.orElse(25);
+        Integer pageSize = size.orElse(100);
         Page<Note> allNotesPage = noteService.findAll(PageRequest.of(currentPage-1, pageSize));
         model.addAttribute("allNotes", allNotesPage);
         Integer totalPages = allNotesPage.getTotalPages();

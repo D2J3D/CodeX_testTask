@@ -16,6 +16,6 @@ public class ViewDTO {
     private Timestamp createdAt;
     private Long noteId;
     private Long userId;
-    private Duration viewTime;
-    private Duration loadingTime;
+    private Double viewTime;
+    private Double loadingTime;
 }

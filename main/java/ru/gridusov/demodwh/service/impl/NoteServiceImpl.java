@@ -54,11 +54,10 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public Note partialUpdate(Long id, Note note) {
-        note.setId(id);
         return noteRepository.findById(id).map(existingNote -> {
             Optional.ofNullable(note.getNoteBody()).ifPresent(existingNote::setNoteBody);
             Optional.ofNullable(note.getNoteViewType()).ifPresent(existingNote::setNoteViewType);
-            Optional.ofNullable(note.getIsPrivate()).ifPresent(existingNote::setIsPrivate);
+            Optional.ofNullable(note.isPrivate()).ifPresent(existingNote::setPrivate);
             return noteRepository.save(existingNote);
         }).orElseThrow(() -> new RuntimeException("Note does not exist"));
     }

@@ -61,13 +61,17 @@ public class ViewServiceImpl implements ViewService {
     }
 
     @Override
+    public Page<View> findViewByCreatedAtBetween(Timestamp startTime, Timestamp endTime, Pageable pageable) {
+        return viewRepository.findViewByCreatedAtBetween(startTime, endTime, pageable);
+    }
+
+    @Override
     public boolean ifExists(Long id) {
         return viewRepository.existsById(id);
     }
 
     @Override
     public View partialUpdate(Long id, View view) {
-        view.setId(id);
         return viewRepository.findById(id).map(existingNote -> {
             Optional.ofNullable(view.getCreatedAt()).ifPresent(existingNote::setCreatedAt);
             Optional.ofNullable(view.getNoteId()).ifPresent(existingNote::setNoteId);

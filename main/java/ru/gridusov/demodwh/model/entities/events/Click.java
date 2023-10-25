@@ -13,6 +13,8 @@ import java.sql.Timestamp;
 public class Click{
     @Id
     private Long id;
+    @Column(name = "created_at")
     private Timestamp createdAt;
+    @Column(name = "note_id")
     private Long noteId;
 }

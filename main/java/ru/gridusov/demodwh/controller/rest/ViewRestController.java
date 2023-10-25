@@ -1,14 +1,18 @@
 package ru.gridusov.demodwh.controller.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.gridusov.demodwh.mappers.impl.ViewMapper;
+import ru.gridusov.demodwh.model.dto.NoteDTO;
 import ru.gridusov.demodwh.model.dto.ViewDTO;
 import ru.gridusov.demodwh.model.entities.events.View;
 import ru.gridusov.demodwh.service.ViewService;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,10 +36,9 @@ public class ViewRestController {
     }
 
     @GetMapping("/")
-    public List<ViewDTO> listViews(){
-        List<View> allViews = viewService.findAll();
-        List<ViewDTO> allViewsDTO = allViews.stream().map(viewMapper::mapTo).toList();
-        return allViewsDTO;
+    public Page<ViewDTO> listViews(Pageable pageable){
+        Page<View> allViews = viewService.findAll(pageable);
+        return allViews.map(viewMapper::mapTo);
     }
 
     @PostMapping("/{id}")
@@ -76,5 +79,11 @@ public class ViewRestController {
         viewService.deleteView(id);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
 
+    }
+
+    @GetMapping("/{startTimestamp}/{endTimestamp}")
+    public Page<ViewDTO> getViewsBetween(@PathVariable("startTimestamp") String startTimestamp, @PathVariable("endTimestamp") String endTimestamp,  Pageable pageable){
+        Page<View> viewsBetweenPage = viewService.findViewByCreatedAtBetween(Timestamp.valueOf(startTimestamp), Timestamp.valueOf(endTimestamp), pageable);
+        return viewsBetweenPage.map(viewMapper::mapTo);
     }
 }

@@ -50,7 +50,6 @@ public class EditServiceImpl implements EditService {
 
     @Override
     public Edit partialUpdate(Long id, Edit edit) {
-        edit.setId(id);
         return editRepository.findById(id).map(existingNote -> {
             Optional.ofNullable(edit.getCreatedAt()).ifPresent(existingNote::setCreatedAt);
             Optional.ofNullable(edit.getNoteId()).ifPresent(existingNote::setNoteId);

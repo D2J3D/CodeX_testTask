@@ -12,16 +12,19 @@ import java.time.Duration;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "note_views")
 public class View{
     @Id
     private Long id;
+    @Column(name = "created_at")
     private Timestamp createdAt;
+    @Column(name = "loading_time")
+    private Double loadingTime;
+    @Column(name = "note_id")
     private Long noteId;
+    @Column(name = "user_id")
     private Long userId;
-    private Duration viewTime;
-    private Duration loadingTime;
-
+    @Column(name = "view_time")
+    private Double viewTime;
 
 }

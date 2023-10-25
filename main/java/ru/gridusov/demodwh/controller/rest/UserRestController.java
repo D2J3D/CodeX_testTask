@@ -2,6 +2,8 @@ package ru.gridusov.demodwh.controller.rest;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -37,11 +39,10 @@ public class UserRestController {
     }
 
     @GetMapping(path = "/")
-    public List<UserDTO> listUsers(){
-        List<User> allUsers = userService.findAll();
-        List<UserDTO> allUsersDTO = allUsers.stream().map(userMapper::mapTo).toList();
+    public Page<UserDTO> listUsers(Pageable pageable){
+        Page<User> allUsers = userService.findAll(pageable);
         log.info("UserController: request for listing all notes was received");
-        return  allUsersDTO;
+        return allUsers.map(userMapper::mapTo);
     }
 
     @GetMapping(path = "/{id}")

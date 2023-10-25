@@ -53,7 +53,6 @@ public class ClickServiceImpl implements ClickService {
 
     @Override
     public Click partialUpdate(Long id, Click click) {
-        click.setId(id);
         return clickRepository.findById(id).map(existingNote -> {
             Optional.ofNullable(click.getCreatedAt()).ifPresent(existingNote::setCreatedAt);
             Optional.ofNullable(click.getNoteId()).ifPresent(existingNote::setNoteId);

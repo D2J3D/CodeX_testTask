@@ -17,6 +17,7 @@ public interface ViewService {
     List<View> findViewByCreatedAtAfter(Timestamp startTime);
     List<View> findViewByCreatedAtBefore(Timestamp endTime);
     List<View> findViewByCreatedAtBetween(Timestamp startTime, Timestamp endTime);
+    Page<View> findViewByCreatedAtBetween(Timestamp startTime, Timestamp endTime, Pageable pageable);
 
     boolean ifExists(Long id);
 

@@ -17,6 +17,5 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
     private Long id;
     private String userName;
-    private Integer notesAmount;
 }
 

@@ -13,14 +13,18 @@ import java.time.Duration;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "note_edits")
 public class Edit{
     @Id
     private Long id;
+    @Column(name = "created_at")
     private Timestamp createdAt;
+    @Column(name = "edit_time")
+    private Double editTime;
+    @Column(name = "note_id")
     private Long noteId;
+    @Column(name = "user_id")
     private Long userId;
-    private Integer editTime;
+
 
 }

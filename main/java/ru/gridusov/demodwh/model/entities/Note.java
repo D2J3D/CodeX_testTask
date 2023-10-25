@@ -21,5 +21,5 @@ public class Note {
     private User user;
     private String noteViewType;
     private String noteBody;
-    private Integer isPrivate;
+    private boolean isPrivate;
 }
