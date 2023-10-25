@@ -61,6 +61,7 @@ View object - object that is responsible for keeping statistics of viewing the n
 |/view-stat/{id}| PATCH |Partially updates object with selected id |
 |/view-stat/{id}| DELETE |Delete a view with selected id|
 
+
 # Getting data from database visually (as a table)
 | Endpoint | Description |
 | --- | --- |
