@@ -27,12 +27,7 @@ public class ViewFormController {
         this.viewService = viewService;
     }
 
-    @RequestMapping(value = "/form/views", method = RequestMethod.GET)
-    public String getViewsBetween(@ModelAttribute final ViewForm viewForm, Model model){
-
-        return "views/views-interval.html";
-    }
-
+    // Developing stage
     @PostMapping("/display/views/views-between")
     public String fetchFormResults(@ModelAttribute ViewForm viewForm){
         Timestamp startPoint = viewForm.getStartPoint();
