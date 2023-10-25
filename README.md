@@ -70,3 +70,11 @@ User object
 |/display/edits|Shows all data from note_edits database, but with pagination and sorted by createdAt field|
 |/display/clicks|Shows all data from nav_button_clicks database, but with pagination and sorted by createdAt field|
 |/display/users|Shows all data from users database, but with pagination|
+
+# Examples
+![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/a9950d75-c02d-4489-8c43-9d93657fc900)
+![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/6f2d1441-7695-49a8-938d-5b8b468a362c)
+![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/cfede29a-b1c9-4eb8-9037-3a45e10087df)
+
+
+
