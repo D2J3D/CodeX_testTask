@@ -61,7 +61,7 @@ View object - object that is responsible for keeping statistics of viewing the n
 |/view-stat/{id}| PUT |Fully updates object with selected id|
 |/view-stat/{id}| PATCH |Partially updates object with selected id |
 |/view-stat/{id}| DELETE |Delete a view with selected id|
-
+|/view-stat/{startTimestamp}/{endTimestamp}| GET |Retrieves a Page\<ViewDTO> with all Views, that were made between startTimestamp and endTimestamp|
 
 # Getting data from database visually (as a table)
 | Endpoint | Description |
