@@ -1,5 +1,5 @@
-# CodeX_testTask
-Data Warehouse implementation for a note keeping service.
+# Note service REST API
+Backend for note keeping service + some endpoints for getting metrics
 
 # Usage cases
 1. This API allows (using http requests) to save data not only about created notes and their authors, but also some probably important metrics for business(such as page loading time, navigation button clicks, time to edit note and note reading time). 
