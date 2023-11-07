@@ -77,4 +77,4 @@ User object
 ![image](https://github.com/D2J3D/CodeX_testTask/assets/120342275/5adf2093-0711-4458-bb65-62def064ef94)
 
 # Stack
-Spring Boot, PostgreSQL, HTML, CSS
+Spring Boot, PostgreSQL, HTML, CSS, Bootstrap
